@@ -1,0 +1,8 @@
+/* centring the cards of Movies  */
+.Movieslist{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    
+}
