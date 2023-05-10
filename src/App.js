@@ -6,6 +6,8 @@ import ListMovie from './components/ListMovies/ListMovie';
 import FilterMovies from './components/FilterMovies/FilterMovies';
 import AddMovie from './components/AddMovie/AddMovie';
 import Carousls from './components/Carousels/Carousls';
+import { Route, Routes } from 'react-router-dom';
+import Trailer from './components/Navbars/Trailer';
 
 
 function App() {
@@ -37,6 +39,13 @@ function App() {
             <ListMovie movies={movies}
                 inputSearch={inputSearch}
                 rateSearch={rateSearch}/>
+                <Routes >
+                <Route path='/' element={ <ListMovie movies={movies}
+                inputSearch={inputSearch}
+                rateSearch={rateSearch}/>} />
+                <Route path='/trailer/:id' element={<Trailer   />} />
+                
+                </Routes>
 
 
         </div>
