@@ -2,14 +2,14 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { moviesData } from './Data/Data'
+import { moviesData } from '../Data/Data'
 import { Button } from 'react-bootstrap'
 
 const Trailer = () => {
 const {id} = useParams()
 const [trailler,setTrailler] = useState({})
 useEffect(()=>{
-    const movie = moviesData.find((m) => m.id == id)
+    const movie = moviesData.find((m) => m.id === id)
     setTrailler(movie)   
 },[id]
 
